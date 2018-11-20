@@ -1,0 +1,141 @@
+************* EParray[ cEP0 ]: DefaultBootFile ************************************
+7      Aantal tijdsonafhankelijke tabellen: == 2! (=xInDep)
+0     ***table 0:  table-type 0 (no interpolation)
+20 1  ***table 0:  cNr_TINTode_Create_Settings (rows), 1 columns
+1              1:  IAlgRout      Algorithm-routine for integration(1=Euler)
+1              2:  IStepRout     Stepper-routine for integration(1=CrudeStep)
+0              3:  IDCRoot       Functie voor het insluiten van een discontinuiteit
+0              4:  IDCStepRout   Stepper-routine voor modellen met discontinuiteiten
+1              5:  IDriver       Driver-routine for integration (1=OdeInt)
+1              6:  I_nsubstep    Aantal sub-stappen in sommige algorithme-routines
+1              7:  I_nstep       Aantal sub-stappen in sommige stepper-routines (>=1)
+1000           8:  I_maxstp      Max. aantal stappen idem
+1.0            9:  I_htry        Initiele stapgrootte
+0.001          10: I_hmin        Minimale stapgrootte
+0.01           11: I_eps         Tolerantie
+0              12: cModelID               * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              13: ReadyToRun             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              14: cNrOfRPs               * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              15: cNrOfSQRQs             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              16: cNrOfAvSpeedsToExport  * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              17: Area (m2): wordt in Shell-omgeving vervangen door Shell-waarde
+0              18: Current_xs             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              19: nDC                    * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              20: GERESERVEERD
+0     ***table 1: table-type 0 (no interpolation) 
+3 11  ***table 1: NrOfDepVar (rows), cNrOfDepVarOptions columns;  
+0   2 0 0 0 0    1 1 1 1 1 ystart[ 1 ];  1: GEMIDDELDE Natschade (%)
+0   2 0 0 0 0    1 1 1 1 1 ystart[ 2 ];  1: GEMIDDELDE Droogteschade (%)
+0   2 0 0 0 0    1 1 1 1 1 ystart[ 3 ];  1: GEMIDDELDE Totale nat- en droogteschade (%)
+0     ***table 2: table-type 0 (no interpolation) 
+1 8   ***Min/max key/init-values 
+1 2   1 25   -1E20 +1E20 -1E20 +1E20   1-2: Landgebruik (1-gras; 2=bouwland); 3-4: Bodemtype (Code conform RIZA 1993, (-)); 5-6:GHG (m-mv); 7-8:GLG (m-mv);
+0     ***table 3: table-type 0 (no interpolation)
+25 3 *** A, B, C coefficienten in regressiefunctie grasland natschade
+-3.25     825      6625000 1  Veen en moerige gronden met moerig-/kleiige bovengrond                     hV/hW   3/10
+-4.093833 794.5363 4549817 2  Veen en moerige gronden met klei- of zanddek                               kVW/zVW 4/12
+-4.937551 787.4966 6624899 3  Gemengdwoelde veen- en moerige gronden                                     iV/jW   7/14
+-4.375    750      5500000 4  Zavel- en kleigronden met veen beginnend tussen 4- en 80 cm                Kz/Kk1  15/18
+-5.5      750      4938249 5  Zavel- en kleigronden met zand beginnend tussen 40 en 80 cm                Kz/Kk2  19/22
+-1.25     750      4375000 6  Zavel- en kleigronden met zware klei beginnend tussen 40 en 80 cm          Kz/Kk34 23/26
+-5.5      750      6625000 7  Zavel- en kleigronden, aflopend profiel                                    Kz/Kk5  27/30
+-5.5      750      5500000 8  Zavelgronden, aflopend profiel                                             Kz5h    27/28
+-4.375    750      6625000 9  Kleigronden, aflopend profiel                                              Kk5h    29/30
+-5.5      600      4934996 10 Zwak lemige, matig fijne zandgronden met humushoudende bovengrond < 15 cm  Z1a     35
+-5.5      600      4934996 11 Zwak temige, matig grove zandgronden                                       Z2a     37
+-6.625    675      5500000 12 Zwak lemige, matig fijne zandgronden met humushoudende bovengrond 15-30 cm tZ1a    39
+-5.5      674.9381 6201738 13 Matig fijne zandgronden met humushoudende bovengrond 15-30 cm              tZ1     39/40
+-6.625    675      5500000 14 Zwak lemige, matig grove zandgronden met humushoudende bovengrond 15-30 cm tZ2a     41
+-5.5      674.9381 6201738 15 Matig grove zandgronden met humushoudende bovengrond 15-30 cm              tZ2     41/42
+-4.375263 674.9076 7150493 16 Matig fijne zandgronden met humus met humushoudende bovengrond 30-50 cm    cZ1     43/44
+-4.375263 674.9076 7150493 17 Matig grove zandgronden met humushoudende bovengrond 30-50 cm              cZ2     45/46
+-4.375263 674.9076 7150493 18 Matig fijne eerdgronden met humushoudende bovengrond > 50 cm               EZ1     47/48
+-4.375263 674.9076 7150493 19 Matig grove eerdgronden met humus met humushoudende bovengrond > 50 cm     EZ2     49/50
+-7.081203 794.5087 4549501 20 Zandgronden met kleidek en grove ondergrond                                kZ1     56
+-6.625    675      5500000 21 Zwak lemige matig fijne podzolgronden met humushoudende bovengrond < 15 cm H1a     58
+-5.5      674.9076 6201782 22 Matig fijne podzolgronden met humushoudende bovenlaat < 15 cm              H1      58/59
+-5.5      674.9076 6201782 23 Matig grove podzolgronden met humushoudende bovenlaag < 15 cm              H2      60/61
+-2.265213 787.5255 4549246 24 Leemgronden, zandig en siltig leem                                         BlKbc   67/68
+-5.5      750      6625000 25 Oude rivierkleigronden, zavel en klei                                      BlKde   69/70
+0     ***table 4: table-type 0 (no interpolation)
+25 3 *** A, B, C coefficienten in regressiefunctie bouwland natschade
+-5.15625  15.625   1.11E+10 1
+-5.15625  15.625   1.11E+10 2
+-7.03125  15.625   1.20E+10 3
+-1.40625  12.5     1.11E+10 4
+-3.28125  12.5     1.11E+10 5
+-0.791016 15.625   8.58E+09 6
+-3.515625 14.0625  9.05E+09 7
+-3.632813 13.28125 8.58E+09 8
+-1.40625  12.5     1.20E+10 9
+-6.943359 13.28125 8.58E+09 10
+-6.943359 13.28125 8.58E+09 11
+-9.6875   15.625   1.11E+10 12
+-6.943359 13.28125 1.31E+10 13
+-9.6875   15.625   1.11E+10 14
+-6.943359 13.28125 1.31E+10 15
+-6.416016 13.28125 1.31E+10 16
+-6.416016 13.28125 1.31E+10 17
+-6.416016 13.28125 1.31E+10 18
+-6.416016 13.28125 1.31E+10 19
+-5.15625  12.5     1.20E+10 20
+-9.6875   15.625   1.11E+10 21
+-6.943359 13.28125 1.31E+10 22
+-6.943359 13.28125 1.31E+10 23
+-1.054688 15.625   8.10E+09 24
+-3.515625 14.0625  9.05E+09 25
+0     ***table 5: table-type 0 (no interpolation)
+25 5 *** A, B, C, D, E coefficienten in regressiefunctie grasland droogteschade
+-1.144    -1.0 0.029561  1.5 0.018064  1
+-1.144    -1.0 0.029561  1.5 0.018064  2
+-1.219784 -1.0 0.003614  1.5 0.012891  3
+2.225781  -1.0 0.011677  1.5 0.011677  4
+-0.24     -1.0 0.002096  1.5 0.011677  5
+6.724559  -1.0 0.011677  1.5 0.011677  6
+-2.68     -1.0 0.011677  1.5 0.011677  7
+-2.68     -1.0 0.0001    1.5 0.01008   8
+-1.144    -1.0 0.002096  1.5 0.011677  9
+2.421454  -1.0 0.0311255 1.5 0.018064 10
+8.798399  -1.0 0.031081  1.5 0.018174 11
+-4.239372 -1.0 0.030844  1.5 0.018291 12
+1.808 0.0 -1.0 0.002096  1.5 0.011677 13
+-2.312293 -1.0 0.030966  1.5 0.018296 14
+-4.250558 -1.0 0.030981  1.5 0.01828  15
+-1.144    -1.0 0.002096  1.5 0.011677 16
+1.818586  -1.0 0.11677   1.5 0.011677 17
+-2.68     -1.0 0.0001    1.5 0.01008  18
+-2.68     -1.0 0.0001    1.5 0.01008  19
+7.437307  -1.0 0.031214  1.5 0.01812  20
+1.808     -1.0 0.002096  1.5 0.011677 21
+2.129492  -1.0 0.11677   1.5 0.011677 22
+1.808     -1.0 0.002096  1.5 0.011677 23
+-1        -1.0 0.00509   1.5 0.00509  24
+-1.144    -1.0 0.01008   1.5 0.01008  25
+0     ***table 6: table-type 0 (no interpolation)
+25 5 *** A, B, C, D, E coefficienten in regressiefunctie bouwland droogteschade
+-1.1444   -1.0 0.029561 1.5 0.018064 1
+-1.1444   -1.0 0.029561 1.5 0.018064 2
+-1.367751 -1.0 0.00346  1.5 0.012768 3
+2.483418  -1.0 0.0001   1.5 0.01008  4
+-0.24     -1.0 0.002096 1.5 0.011677 5
+8.185883  -1.0 0.010689 1.5 0.010689 6
+-4.848    -1.0 0.01008  1.5 0.011677 7
+-4.585879 -1.0 0.010786 1.5 0.010786 8
+-4.819366 -1.0 0.005042 1.5 0.011947 9
+13.93201  -1.0 0.014709 1.5 0.011608 10
+18.856    -1.0 0.010008 1.5 0.010008 11
+3.672363  -1.0 0.002096 1.5 0.011677 12
+1.808     -1.0 0.002096 1.5 0.011677 13
+-2.379551 -1.0 0.030898 1.5 0.018248 14
+-2.370289 -1.0 0.03093  1.5 0.018253 15
+-0.24     -1.0 0.011677 1.5 0.011677 16
+1.836045  -1.0 0.011677 1.5 0.011677 17
+-3.833522 -1.0 0.016001 1.5 0.012439 18
+-3.833522 -1.0 0.016001 1.5 0.012439 19
+15.4      -1.0 0.015319 1.5 0.011608 20
+3.775617  -1.0 0.011677 1.5 0.011677 21
+3.775617  -1.0 0.011677 1.5 0.011677 22
+4.887832  -1.0 0.011677 1.5 0.011677 23
+-0.24     -1.0 0.0001   1.5 0.0001   24
+-2.8      -1.0 0.018064 1.5 0.011677 25
+0             Aantal tijdsafhankelijk (xy)-tabellen **********************************
